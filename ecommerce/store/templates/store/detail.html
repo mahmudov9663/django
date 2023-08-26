@@ -1,0 +1,12 @@
+{% extends 'store/main.html' %}
+{% load static %}
+{% block content %}
+<div class="detail">
+    <div class="det">
+        <img src="{{prod.ImageURL}}" alt="">
+        <h1>{{prod.name}}</h1>
+        <h2>{{prod.descript}}</h2>
+        <h3>{{prod.price}}</h3>
+    </div>
+</div>
+{% endblock %}

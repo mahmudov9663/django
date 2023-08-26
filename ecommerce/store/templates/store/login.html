@@ -1,0 +1,22 @@
+{% extends 'store/main.html' %}
+{% load static %}
+{% block content %}
+<div class="logging">
+    <div class="log">
+        <h1>Full name</h1>
+        <hr>
+        <form action="" method="post">
+            {% csrf_token %}
+            <input type="text" name="username" placeholder="First name"><br>
+            <input type="password" name="password" placeholder="Confirm password"><br>
+            <input type="submit"><br>
+            <a href="register">You don't have an account?</a>
+        </form>
+        <div>
+            {% for message in messages %}
+            <h1>{{message}}</h1>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}
